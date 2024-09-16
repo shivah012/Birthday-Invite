@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Level Up UI</title>
+    
+    <!-- Poppins font and Press Start 2P (Pixel font) from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset default styling */
+        * {
+            color: rgba(255, 255, 255, 0.785);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; /* Poppins font for the rest */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative; /* Make sure the body acts as a parent for pseudo-elements */
+            overflow: hidden;
+        }
+
+        /* Background image */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://wallpaperaccess.com/full/39608.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(8px); /* Apply blur effect */
+            z-index: -2; /* Push the background image to the back */
+        }
+
+        /* Black overlay */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            z-index: -1; /* Ensure it's behind the content but above the background */
+        }
+
+        .container {
+            text-align: center;
+            max-width: 80%;
+            position: relative; /* Ensure content is above the overlay */
+            z-index: 1; /* Bring content above the overlay */
+        }
+
+        .title {
+            font-size: 24px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        /* Pixelated font for LEVEL UP */
+        .level-up {
+            font-family: 'Press Start 2P', cursive; /* Use pixelated font */
+            font-size: 64px;
+            color: #d39efb; /* Violet color */
+            text-shadow: 
+                0 0 10px rgba(211, 158, 251, 0.7), /* Soft glow */
+                0 0 20px rgba(211, 158, 251, 0.6), /* Stronger glow */
+                0 0 30px rgba(211, 158, 251, 0.5), /* Outer glow */
+                0 0 40px rgba(211, 158, 251, 0.4); /* Extended glow */
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .date {
+            font-weight: bold;
+        }
+
+        .update-btn {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: none; /* Remove all borders */
+            border-bottom: 2px solid #97979753; /* Only bottom border */
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none; /* Remove underline */
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .update-btn:hover {
+            text-shadow: 
+                0 0 10px rgba(211, 158, 251, 0.7), /* Soft glow */
+                0 0 20px rgba(211, 158, 251, 0.6), /* Stronger glow */
+                0 0 30px rgba(211, 158, 251, 0.5), /* Outer glow */
+                0 0 40px rgba(211, 158, 251, 0.4); 
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">DEBASISH IS READY TO</div>
+        <div class="level-up">LEVEL UP</div>
+        <div class="subtitle">
+            IT'S GAME ON AT DEBASISH 20TH BIRTHDAY!<br>
+            JOIN US FOR HIS MAGAZINE RELEASE.<br>
+            <span class="date">TUESDAY, 17 SEPTEMBER 12AM</span><br>
+            REALLY GREAT EXPERIENCE
+        </div>
+        <a class="update-btn" href="https://online.flippingbook.com/view/206054296/" target="_blank" rel="noopener noreferrer">TO GET THE MAGAZINE UPDATE</a>
+    </div>
+
+</body>
+</html>
